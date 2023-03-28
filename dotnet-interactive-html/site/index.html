@@ -12,9 +12,13 @@
         </textarea>
         <button id="submit_code">Submit Code</button>
     </div>
+
+    <hr />
+    <h2>Output</h2>
     <div id="output_render_target">
 
     </div>
+
     <script>
         let domparser = new DOMParser();
         interactive.init(window);
@@ -32,9 +36,12 @@
                         case "DisplayedValueProduced":
                         case "DisplayedValueUpdated":
                         case "DisplayedValueUpdated":
+                        case "StandardOutputValueProduced":
                             let formattedValues = eventEnvelope.event.formattedValues;
+                            console.log(formattedValues);
 
                             let html = formattedValues.find(fv => fv.mimeType === "text/html");
+                            console.log(html);
                             if (html) {
                                 let div = document.createElement("div");
                                 document.getElementById("output_render_target").appendChild(div);
@@ -50,6 +57,7 @@
                             }
 
                             let text = formattedValues.find(fv => fv.mimeType === "text/plain");
+                            console.log(text);
                             if (text) {
                                 let div = document.createElement("div");
                                 div.innerText = text.value;
