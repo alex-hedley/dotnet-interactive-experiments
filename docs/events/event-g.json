@@ -1,0 +1,21 @@
+{
+  "event": { "code": "Console.WriteLine(\"a\");" },
+  "eventType": "CompleteCodeSubmissionReceived",
+  "command": {
+    "token": "23c8e9df-e70d-a0f7-508b-b93551f12b04::2",
+    "id": "",
+    "commandType": "SubmitCode",
+    "command": {
+      "code": "Console.WriteLine(\"a\");",
+      "submissionType": "run",
+      "targetKernelName": "csharp",
+      "originUri": null,
+      "destinationUri": null
+    },
+    "routingSlip": [
+      "kernel://pid-10375/?tag=arrived",
+      "kernel://pid-10375/csharp?tag=arrived"
+    ]
+  },
+  "routingSlip": ["kernel://pid-10375/csharp", "kernel://pid-10375/"]
+}

@@ -1,0 +1,20 @@
+{
+  "event": {
+    "code": "\r\n#r \"/Users/alexhedley/.dotnet/tools/.store/microsoft.dotnet-interactive/1.0.416502/microsoft.dotnet-interactive/1.0.416502/tools/net7.0/any/Microsoft.DotNet.Interactive.Jupyter.dll\"\r\nusing Microsoft.DotNet.Interactive.Jupyter.Formatting;\r\n"
+  },
+  "eventType": "CompleteCodeSubmissionReceived",
+  "command": {
+    "token": "deferredCommand::261314f46e3b452f837d378ab6cad5d7",
+    "id": "ac8ec3617e5749d78b9ab6e7f8e2f6ad",
+    "commandType": "SubmitCode",
+    "command": {
+      "code": "\r\n#r \"/Users/alexhedley/.dotnet/tools/.store/microsoft.dotnet-interactive/1.0.416502/microsoft.dotnet-interactive/1.0.416502/tools/net7.0/any/Microsoft.DotNet.Interactive.Jupyter.dll\"\r\nusing Microsoft.DotNet.Interactive.Jupyter.Formatting;\r\n",
+      "submissionType": "run",
+      "targetKernelName": "csharp",
+      "originUri": null,
+      "destinationUri": null
+    },
+    "routingSlip": ["kernel://pid-9169/csharp?tag=arrived"]
+  },
+  "routingSlip": ["kernel://pid-9169/csharp", "kernel://pid-9169/"]
+}

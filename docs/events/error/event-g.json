@@ -1,0 +1,62 @@
+{
+  "event": {
+    "diagnostics": [
+      {
+        "linePositionSpan": {
+          "start": { "line": 0, "character": 18 },
+          "end": { "line": 0, "character": 18 }
+        },
+        "severity": "error",
+        "code": "CS1056",
+        "message": "Unexpected character '\\'"
+      },
+      {
+        "linePositionSpan": {
+          "start": { "line": 0, "character": 19 },
+          "end": { "line": 0, "character": 19 }
+        },
+        "severity": "error",
+        "code": "CS1010",
+        "message": "Newline in constant"
+      },
+      {
+        "linePositionSpan": {
+          "start": { "line": 0, "character": 25 },
+          "end": { "line": 0, "character": 25 }
+        },
+        "severity": "error",
+        "code": "CS1026",
+        "message": ") expected"
+      }
+    ],
+    "formattedDiagnostics": [
+      {
+        "mimeType": "text/plain",
+        "value": "(1,19): error CS1056: Unexpected character '\\'"
+      },
+      {
+        "mimeType": "text/plain",
+        "value": "(1,20): error CS1010: Newline in constant"
+      },
+      { "mimeType": "text/plain", "value": "(1,26): error CS1026: ) expected" }
+    ]
+  },
+  "eventType": "DiagnosticsProduced",
+  "command": {
+    "token": "23c8e9df-e70d-a0f7-508b-b93551f12b04::1",
+    "id": "",
+    "commandType": "SubmitCode",
+    "command": {
+      "code": "Console.WriteLine(\\\"a\\\");",
+      "submissionType": "run",
+      "targetKernelName": "csharp",
+      "originUri": null,
+      "destinationUri": null
+    },
+    "routingSlip": [
+      "kernel://pid-9169/?tag=arrived",
+      "kernel://pid-9169/csharp?tag=arrived"
+    ]
+  },
+  "routingSlip": ["kernel://pid-9169/csharp", "kernel://pid-9169/"]
+}

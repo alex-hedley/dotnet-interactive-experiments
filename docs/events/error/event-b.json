@@ -1,0 +1,20 @@
+{
+  "event": {
+    "code": "\r\nusing static Microsoft.DotNet.Interactive.Kernel;\r\n"
+  },
+  "eventType": "CompleteCodeSubmissionReceived",
+  "command": {
+    "token": "deferredCommand::ce50592dbffd4bab941bb82a6e7e1d79",
+    "id": "fa01a85909394ee6b9012e1f4f67ec76",
+    "commandType": "SubmitCode",
+    "command": {
+      "code": "\r\nusing static Microsoft.DotNet.Interactive.Kernel;\r\n",
+      "submissionType": "run",
+      "targetKernelName": "csharp",
+      "originUri": null,
+      "destinationUri": null
+    },
+    "routingSlip": ["kernel://pid-9169/csharp?tag=arrived"]
+  },
+  "routingSlip": ["kernel://pid-9169/csharp", "kernel://pid-9169/"]
+}

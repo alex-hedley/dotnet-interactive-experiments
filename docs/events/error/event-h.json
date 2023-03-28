@@ -1,0 +1,24 @@
+{
+  "event": {
+    "message": "(1,19): error CS1056: Unexpected character '\\'\n(1,20): error CS1010: Newline in constant\n(1,26): error CS1026: ) expected",
+    "executionOrder": null
+  },
+  "eventType": "CommandFailed",
+  "command": {
+    "token": "23c8e9df-e70d-a0f7-508b-b93551f12b04::1",
+    "id": "",
+    "commandType": "SubmitCode",
+    "command": {
+      "code": "Console.WriteLine(\\\"a\\\");",
+      "submissionType": "run",
+      "targetKernelName": "csharp",
+      "originUri": null,
+      "destinationUri": null
+    },
+    "routingSlip": [
+      "kernel://pid-9169/?tag=arrived",
+      "kernel://pid-9169/csharp?tag=arrived"
+    ]
+  },
+  "routingSlip": ["kernel://pid-9169/csharp", "kernel://pid-9169/"]
+}
