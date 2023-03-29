@@ -1,5 +1,10 @@
 # dotnet Interactive Experiments
 
+- [dotnet-interactive-html](/dotnet-interactive-html/readme.md)
+- [monaco-example](/monaco-example/readme.md)
+
+---
+
 - [dotnet-interactive](https://github.com/dotnet/interactive)
 
 Install
