@@ -7,7 +7,6 @@ Existing Event Types in experiment
 - ReturnValueProduced
 - DisplayedValueProduced
 - DisplayedValueUpdated
-- DisplayedValueUpdated
 
 ---
 
