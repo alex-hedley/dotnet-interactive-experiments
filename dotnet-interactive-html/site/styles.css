@@ -1,0 +1,13 @@
+#code_src {
+    background-color: antiquewhite;
+}
+
+#output_render_target {
+    background-color: black;
+    color: green;
+}
+
+#events {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+}

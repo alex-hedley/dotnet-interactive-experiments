@@ -1,75 +1,49 @@
-<html>
-<title>Interactive cell demo</title>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content=".NET Interactive HTML" />
+        <meta name="keywords" content=".NET,Interactive,HTML" />
+        <meta name="author" content="Microsoft, Alex Hedley" />
+
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="shortcut icon" href="favicon.ico" />
+
+        <title>Interactive cell demo</title>
+    </head>   
+
 <header>
     <script type="text/javascript" src="http://localhost:9000/resources/dotnet-interactive.js"></script>
 </header>
 
 <body>
+    <h1>.NET Interactive (Try .NET)</h1>
     <div>
         <label style="display: block;">Code here</label>
-        <textarea type="text" id="code_src" rows="3" cols="80" style="display: block;">
-
-        </textarea>
+        <textarea type="text" id="code_src" rows="3" cols="80" style="display: block;">Console.WriteLine("Hello, World!");</textarea>
         <button id="submit_code">Submit Code</button>
     </div>
 
     <hr />
+
     <h2>Output</h2>
     <div id="output_render_target">
-
     </div>
 
-    <script>
-        let domparser = new DOMParser();
-        interactive.init(window);
-        interactive.createDotnetInteractiveClient("http://localhost:9000/")
-            .then(client => {
-                window.document.getElementById("submit_code").onclick = () => {
-                    let code = window.document.getElementById("code_src").value;
-                    client.submitCode(code);
-                };
+    <hr />
 
-                client.subscribeToKernelEvents(eventEnvelope => {
-                    console.log(eventEnvelope);
-                    switch (eventEnvelope.eventType) {
-                        case "ReturnValueProduced":
-                        case "DisplayedValueProduced":
-                        case "DisplayedValueUpdated":
-                        case "DisplayedValueUpdated":
-                        case "StandardOutputValueProduced":
-                            let formattedValues = eventEnvelope.event.formattedValues;
-                            console.log(formattedValues);
+    <h2>Events</h2>
+    
+    <div id="formattedEvents">
+    </div>
 
-                            let html = formattedValues.find(fv => fv.mimeType === "text/html");
-                            console.log(html);
-                            if (html) {
-                                let div = document.createElement("div");
-                                document.getElementById("output_render_target").appendChild(div);
-                                let fragment = domparser.parseFromString(html.value, "text/html");
+    <br />
+    
+    <div id="events">
+    </div>
 
-                                for (let element of fragment.getElementsByTagName("BODY")[0].childNodes) {
-                                    div.appendChild(element);
-                                    if (element.tagName === "SCRIPT") {
-                                        eval(element.innerText);
-                                    };
-                                }
-                                return;
-                            }
-
-                            let text = formattedValues.find(fv => fv.mimeType === "text/plain");
-                            console.log(text);
-                            if (text) {
-                                let div = document.createElement("div");
-                                div.innerText = text.value;
-                                document.getElementById("output_render_target").appendChild(div);
-                                return;
-                            }
-
-                            break;
-                    }
-                });
-            });
-    </script>
+    <script type="text/javascript" src="app.js"></script>
 </body>
 
 </html>
